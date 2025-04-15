@@ -1,0 +1,75 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(135deg, grey, white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.choices button {
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.choices button:hover {
+  transform: scale(1.1);
+  background-color: #eee;
+}
+
+.result p, .result h2 {
+  margin: 0.5rem 0;
+}
+@keyframes flash-red {
+  0%   { background-color: #ffffff; }
+  20%  { background-color: #f5a5a5; } /* halvány piros */
+  40%  { background-color: #f15c5c; } /* erősebb piros */
+  60%  { background-color: #e34949; } /* sötétebb piros */
+  80%  { background-color: #f15c5c; } /* vissza erősebb piros */
+  100% { background-color: #ffffff; }
+}
+
+@keyframes flash-green {
+  0%   { background-color: #ffffff; }
+  20%  { background-color: #a2d8a0; } /* világosabb zöld */
+  40%  { background-color: #80d27f; } /* közepes zöld */
+  60%  { background-color: #66c45f; } /* sötétebb zöld */
+  80%  { background-color: #80d27f; } /* vissza közepes zöld */
+  100% { background-color: #ffffff; }
+  
+}
+
+@keyframes flash-draw {
+  0%   { background-color: #ffffff; }
+  20%  { background-color: #d0d0d0; } /* világos szürke */
+  40%  { background-color: #a8a8a8; } /* közepes szürke */
+  60%  { background-color: #808080; } /* sötétebb szürke */
+  80%  { background-color: #a8a8a8; } /* vissza közepes szürke */
+  100% { background-color: #ffffff; }
+}
+
+.flash-loss {
+  animation: flash-red 0.7s ease;
+}
+
+.flash-win {
+  animation: flash-green 0.7s ease;
+}
+
+.flash-draw {
+  animation: flash-draw 0.7s ease;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Kő – Papír – Olló</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Kő – Papír – Olló</h1>
+    <div class="choices">
+      <button onclick="play('rock')">🪨 Kő</button>
+      <button onclick="play('paper')">📄 Papír</button>
+      <button onclick="play('scissors')">✂️ Olló</button>
+    </div>
+    <div class="result">
+      <p id="user-choice">Te: -</p>
+      <p id="computer-choice">Gép: -</p>
+      <h2 id="winner">Válassz egyet!</h2>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
